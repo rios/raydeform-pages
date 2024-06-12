@@ -1,0 +1,369 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+    body {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1100px;
+    }
+
+    h1 {
+        font-size: 32px;
+        font-weight: 300;
+    }
+
+    .disclaimerbox {
+        background-color: #eee;
+        border: 1px solid #eeeeee;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        padding: 20px;
+    }
+
+    video.header-vid {
+        height: 140px;
+        border: 1px solid black;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+    }
+
+    img.header-img {
+        height: 140px;
+        border: 1px solid black;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+    }
+
+    img.rounded {
+        border: 1px solid #eeeeee;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+    }
+
+    a:link, a:visited {
+        color: #1367a7;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #208799;
+    }
+
+    td.dl-link {
+        height: 160px;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+        box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.35), /* The top layer shadow */ 5px 5px 0 0px #fff, /* The second layer */ 5px 5px 1px 1px rgba(0, 0, 0, 0.35), /* The second layer shadow */ 10px 10px 0 0px #fff, /* The third layer */ 10px 10px 1px 1px rgba(0, 0, 0, 0.35), /* The third layer shadow */ 15px 15px 0 0px #fff, /* The fourth layer */ 15px 15px 1px 1px rgba(0, 0, 0, 0.35), /* The fourth layer shadow */ 20px 20px 0 0px #fff, /* The fifth layer */ 20px 20px 1px 1px rgba(0, 0, 0, 0.35), /* The fifth layer shadow */ 25px 25px 0 0px #fff, /* The fifth layer */ 25px 25px 1px 1px rgba(0, 0, 0, 0.35); /* The fifth layer shadow */
+        margin-left: 10px;
+        margin-right: 45px;
+    }
+
+    .paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+        box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.35); /* The top layer shadow */
+
+        margin-left: 10px;
+        margin-right: 45px;
+    }
+
+
+    .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+        box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.35), /* The top layer shadow */ 5px 5px 0 0px #fff, /* The second layer */ 5px 5px 1px 1px rgba(0, 0, 0, 0.35), /* The second layer shadow */ 10px 10px 0 0px #fff, /* The third layer */ 10px 10px 1px 1px rgba(0, 0, 0, 0.35); /* The third layer shadow */
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-right: 30px;
+        margin-bottom: 5px;
+    }
+
+    .vert-cent {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    hr {
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    }
+</style>
+
+<html>
+<head>
+    <title>Ray Deformation Networks for Novel View Synthesis of Refractive Objects</title>
+    <meta property="og:image" content="./resource/teaser.png"/>
+    <meta property="og:title" content="Ray Deformation Networks for Novel View Synthesis of Refractive Objects"/>
+
+    <!-- Get from Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src=""></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-75863369-6');
+    </script>
+</head>
+
+<body>
+<br>
+
+<center>
+    <span style="font-size:32px">Ray Deformation Networks for Novel View Synthesis of Refractive Objects</span>
+    <br>
+    <table align=center width=600px>
+        <tr>
+            <!---------------------  authors --------------------->
+            <span style="font-size:20px">
+				  <div style="display:inline-block">
+				  <a href="https://weijiandeng.xyz" target="_blank" style=" color:#007acc">Weijian Deng<sup>1</sup></a>,
+				  </div>
+
+				 <div style="display:inline-block">
+				  <a href="https://sites.google.com/view/djcampbell" target="_blank" style=" color:#007acc">Dylan Campbell<sup>1</sup></a>,
+				  </div>
+
+				  <div style="display:inline-block">
+				  <a href="https://chuny1.github.io/" target="_blank" style=" color:#007acc">Chunyi Sun<sup>1</sup></a>,
+				  </div>
+
+					<br>
+
+				  <div style="display:inline-block">
+				  <a href="https://www.linkedin.com/in/shubham-kanitkar" target="_blank" style=" color:#007acc">Shubham Kanitkar<sup>2</sup></a>,
+				  </div>
+
+					<div style="display:inline-block">
+				  <a href="https://www.linkedin.com/in/shaffermatthew" target="_blank" style=" color:#007acc">Matthew E. Shaffer<sup>2</sup></a>,
+				  </div>
+
+				 <div style="display:inline-block">
+				  <a href="http://users.cecs.anu.edu.au/~sgould/" target="_blank"
+                     style=" color:#007acc">Stephen Gould<sup>1</sup></a>,
+                 </div> </span>
+        </tr>
+    </table>
+
+    <!--------------------- affiliations --------------------->
+    <div class="gap-5"></div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-3">
+            <center><span style="font-size:20px">
+          <sup>1</sup>Australian National University, <sup>2</sup>RIOS Intelligent Machines
+        </span></center>
+        </div>
+    </div>
+    <hr>
+
+    <table align=center width=280px>
+        <tr>
+            <td align=center width=10px>
+                <center>
+                    <span style="font-size:24px"><b>WACV'24</b></span>
+                </center>
+            </td>
+
+            <td align=center width=120px>
+                <center>
+                    <span style="font-size:24px">[<a href="./files/wacv_157_poster.pdf" target="_blank"
+                                                     style="color:#007acc">Poster</a>]</a></span>
+                </center>
+            </td>
+            <td align=center width=120px>
+                <center>
+                    <span style="font-size:24px"> [<a href="./files/0157.pdf" target="_blank" style="color:#007acc">Paper</a>]</span><br>
+                </center>
+            </td>
+
+            <td align=center width=120px>
+                <center>
+                    <span style="font-size:24px">  [<a href="./files/wacv24-157-slides.pdf" target="_blank"
+                                                       style="color:#007acc">Slides</a>]</span><br>
+                </center>
+            </td>
+
+            <td align=center width=120px>
+                <center>
+                    <span style="font-size:24px">   [<a href="./files/bibtex.txt" target="_blank" style="color:#007acc">BibTeX</a>]</span><br>
+                </center>
+            </td>
+
+
+            <td align=center width=120px>
+                <center>
+                    <span style="font-size:24px">   [<a href="https://github.com/Simon4Yan/raydeform" target="_blank"
+                                                        style="color:#007acc">Code</a>]</span><br>
+                </center>
+            </td>
+
+        </tr>
+    </table>
+
+</center>
+
+<table align=center width=850px>
+    <tr>
+
+        <td>
+            <div class="img" style="text-align:center">
+                <img src="./figs/motivation.png" style="margin:0.2em;max-width:60%">
+            </div>
+
+            <table align=center width=850px>
+                <tr>
+                    <td>
+                        - NeRF methods learn the density field based on <b>light transports along straight
+                        path</b><br>
+                        - When light paths intersect refractive objects, <b>they may curve</b> (dashed line),
+                        depending on the angle of incidence<br>
+                        - We propose to <b>bend the light rays</b> by predicting position and direction offsets for
+                        sample points along the rays<br>
+
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<hr>
+
+<table align=center width=850px>
+    <tr>
+        <td>
+
+            <center><h1>Abstract</h1></center>
+
+            <p style="text-align:justify; text-justify:inter-ideograph;">
+                Neural Radiance Fields (NeRF) have demonstrated exceptional capabilities in creating photorealistic
+                novel views
+                using volume rendering on a radiance field.
+                However, the intrinsic assumption of straight light rays within NeRF becomes a limitation when dealing
+                with
+                transparent or translucent objects that exhibit refraction, and therefore have curved light paths.
+                This hampers the ability of these approaches to accurately model the appearance of refractive objects,
+                resulting
+                in suboptimal novel view synthesis and geometry estimates.
+                To address this issue, we propose an innovative solution using deformable networks to learn a tailored
+                deformation field for refractive objects.
+                Our approach predicts position and direction offsets, allowing NeRF to model the curved light paths
+                caused by
+                refraction and therefore the complex and highly view-dependent appearances of refractive objects.
+                We also introduce a regularization strategy that encourages piece-wise linear light paths, since most
+                physical
+                systems can be approximated with a piece-wise constant index of refraction.
+                By seamlessly integrating our deformation networks into the NeRF framework, our method achieves
+                significant
+                improvements in rendering refractive objects from novel views.
+            </p>
+
+            <hr>
+            <center><h1>Talk</h1></center>
+
+
+            <div>
+                <iframe width="100%" height="360" src="https://www.youtube.com/embed/EnBIWbdRQCE?si=5WAJNTY15rnxTtgF"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+
+            <center>
+			<span style="font-size:28px">&nbsp;[<a href="./files/wacv24-157-slides.pdf" target="_blank"
+                                                   style="color:#007acc">Slides</a>]
+                    </span>
+            </center>
+
+            <hr>
+
+            <center><h1>Ray Deformation Networks</h1>
+
+                <div class="img" style="text-align:center">
+                    <img src="./figs/method.png" style="margin:0.2em;max-width:80%">
+                </div>
+
+                <span style="font-size:28px">&nbsp;[<a href="https://github.com/Simon4Yan/raydeform" target="_blank" style="color:#007acc">Code</a>]</span>
+
+                <hr>
+                <h1>Improved Novel View Synthesis</h1>
+
+                <div class="img" style="text-align:center">
+                    <img src="./figs/results.png" style="margin:0.2em;max-width:60%">
+                </div>
+
+            </center>
+
+        </td>
+    </tr>
+</table>
+
+<hr>
+<table align=center width=500px>
+    <center><h1>Paper and Supplementary Material</h1></center>
+    <tr>
+        <td><a href=""><img class="layered-paper-big" style="height:175px" src="./files/paper.png"/></a></td>
+        <td><span style="font-size:14pt"> Deng W, Campbell D, Sun C, Kanitkar S, Shaffer M, Gould S.<br>
+				<b>Ray Deformation Networks for Novel View Synthesis of Refractive Objects.</b><br>
+				In WACV, 2024.<br>
+				(hosted on [<a href="./files/0157.pdf" target="_blank" style="color:#007acc">Paper</a>]) <br>
+        </span>
+        </td>
+    </tr>
+</table>
+<br>
+
+<table align=center width=100px>
+    <tr>
+        </tb>
+        <center>
+            <td><span style="font-size:14pt">
+				<a href="./resources/bibtex.txt">[Bibtex]</a>
+        </span>
+        </center>
+        </td>
+    </tr>
+</table>
+
+
+<center>
+    <hr>
+    <p>Correspondence to {firstname.lastname}@anu.edu.au</p>
+    <hr>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="res/js/bootstrap.min.js"></script>
+</center>
+
+<table align=center width=600px>
+    <tr>
+        <td width=400px>
+            <left>
+                <center><h1>Acknowledgements</h1></center>
+                This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a
+                    href="http://richzhang.github.io/">Richard Zhang</a> for a <a
+                    href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a
+                    href="https://github.com/richzhang/webpage-template">here</a>.
+            </left>
+        </td>
+    </tr>
+</table>
+
+<br>
+
+</body>
+</html>
